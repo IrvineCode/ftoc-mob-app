@@ -7,8 +7,10 @@ import {
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import AnnouncementsScreen from '../screens/AnnouncementsScreen';
+import InformationScreen from '../screens/InformationScreen';
+
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -28,19 +30,49 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const AnnouncementsStack = createStackNavigator({
+  Announcements: AnnouncementsScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+AnnouncementsStack.navigationOptions = {
+  tabBarLabel: 'Announcements',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
     />
   ),
-};
+}
+
+const InformationStack = createStackNavigator({
+  Information: InformationScreen,
+});
+
+InformationStack.navigationOptions = {
+  tabBarLabel: 'Information',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+    />
+  ),
+}
+
+
+const Stack = createStackNavigator({
+  Information: InformationScreen,
+});
+
+InformationStack.navigationOptions = {
+  tabBarLabel: 'Information',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+    />
+  ),
+}
+
 
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen,
@@ -56,8 +88,12 @@ SettingsStack.navigationOptions = {
   ),
 };
 
+
+
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  AnnouncementsStack,
+  InformationStack,
   SettingsStack,
+  
 });

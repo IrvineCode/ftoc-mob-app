@@ -11,13 +11,18 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+import { SettingsButton } from '../components/SettingsButton';
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
   return (
     <View style={styles.container}>
+
+      <SettingsButton></SettingsButton>
+
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
+        
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -134,6 +139,14 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
+  },
+  settingsImage: {
+    width: 32,
+    height: 32,
+    position: 'absolute',
+    left: 20,
+    top: 40,
+    zIndex: 10
   },
   getStartedContainer: {
     alignItems: 'center',
