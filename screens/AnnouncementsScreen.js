@@ -1,13 +1,10 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import { ScrollView, StyleSheet, View } from 'react-native';
+
 
 export default function AnnouncementsScreen() {
   return (
     <ScrollView style={styles.container}>
-      {/**
-       */}
-      <ExpoLinksView />
     </ScrollView>
   );
 }

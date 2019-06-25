@@ -5,8 +5,7 @@ import { ExpoLinksView } from '@expo/samples';
 export default function InformationScreen() {
   return (
     <ScrollView style={styles.container}>
-      {/**
-       */}
+      
       <ExpoLinksView />
     </ScrollView>
   );

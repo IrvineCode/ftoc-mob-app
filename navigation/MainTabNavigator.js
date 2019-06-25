@@ -10,6 +10,7 @@ import HomeScreen from '../screens/HomeScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import AnnouncementsScreen from '../screens/AnnouncementsScreen';
 import InformationScreen from '../screens/InformationScreen';
+import CalendarScreen from '../screens/CalendarScreen';
 
 
 const HomeStack = createStackNavigator({
@@ -74,12 +75,12 @@ InformationStack.navigationOptions = {
 }
 
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const CalendarStack = createStackNavigator({
+  Calendar: CalendarScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+CalendarStack.navigationOptions = {
+  tabBarLabel: 'Calendar',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -94,6 +95,6 @@ export default createBottomTabNavigator({
   HomeStack,
   AnnouncementsStack,
   InformationStack,
-  SettingsStack,
+  CalendarStack,
   
 });
